@@ -39,7 +39,7 @@ for disp in disparity_maps:
     plt.imshow(disp)
     plt.show()
 
-def decompose_projection_matrix(p):
+def decompose_projection_matrix_QR(p):
     partial_matrix = p[:, :3]
     Q, R = np.linalg.qr(partial_matrix)
     r = np.linalg.inv(Q)
@@ -48,6 +48,11 @@ def decompose_projection_matrix(p):
     if np.linalg.det(r) < 0: r = -r
     t = -np.linalg.inv(k) @ p[:, 3].reshape(3, 1)
     return k, r, np.append(t, 1).reshape(4, 1)
+
+def decompose_projection_matrix(p):
+    k, r, t, rx, ry, rz, ea = cv2.decomposeProjectionMatrix(p)
+    t = t /t[3, 0]
+    return k, r, t
 
 k_left, r_left, t_left = decompose_projection_matrix(p_left)
 k_right, r_right, t_right = decompose_projection_matrix(p_right)
