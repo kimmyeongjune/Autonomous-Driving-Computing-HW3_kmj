@@ -27,7 +27,8 @@ def compute_left_disparity_map(num_disparities, block_size, window_size, img_lef
 
 disparity_maps = [
     compute_left_disparity_map(int(6 * 16 * 1), 15, 6, img_left, img_right),
-    compute_left_disparity_map(int(8 * 16 * 1), 15, 6, img_left, img_right),
+    compute_left_disparity_map(int(2 * 16 * 1), 15, 6, img_left, img_right),
+    compute_left_disparity_map(int(12 * 16 * 1), 15, 6, img_left, img_right),
     compute_left_disparity_map(int(6 * 16 * 1), 21, 6, img_left, img_right),
     compute_left_disparity_map(int(6 * 16 * 1), 5, 6, img_left, img_right),
     compute_left_disparity_map(int(6 * 16 * 1), 15, 12, img_left, img_right),
