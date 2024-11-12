@@ -8,7 +8,7 @@ stereo_depth.py에 코드를 완성하여 업로드하였습니다. 시차(dispa
   - num_disparities = 96, block_size = 15, window_size = 6 설정을 기준으로 생성한 시차 맵을 Figure 1에 표시하였습니다. 이 기준 시차 맵을 바탕으로 다른 파라미터 값을 변경하며 실험을 진행하였습니다.
 
 - **num_disparities 변경**: 
-  - num_disparities 값을 기준(96)에서 낮추고(Figure 2), 높여(Figure 3) 보았습니다.
+  - num_disparities 값을 기준(96)에서 줄인(Figure 2) 경우와 높인(Figure 3) 경우를 비교하였습니다.
 
 - **block_size 변경**: 
   - block_size 값을 기준(15)에서 키운(Figure 4) 경우와 줄인(Figure 5) 경우를 비교하였습니다. 
